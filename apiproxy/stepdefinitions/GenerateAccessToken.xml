@@ -1,0 +1,12 @@
+<!-- Generates an OAuth 2.0 access token using the client_credentials grant type -->
+<OAuthV2 name="GenerateAccessToken">
+	<Operation>GenerateAccessToken</Operation>
+	<ExpiresIn>1200000</ExpiresIn> <!-- This is in milliseconds, so expire in 20 minutes -->
+	<SupportedGrantTypes>
+		<GrantType>client_credentials</GrantType>
+	</SupportedGrantTypes>
+	<GrantType>request.formparam.grant_type</GrantType>
+	<Scope>request.formparam.scope</Scope>
+	<GenerateResponse enabled="false" />
+	<GenerateErrorResponse enabled="true" />
+</OAuthV2>

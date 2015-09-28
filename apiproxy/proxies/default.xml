@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+	<Description>Unit testing demo proxy</Description>
+
+	<DefaultFaultRule name="CatchAll">
+        <AlwaysEnforce>true</AlwaysEnforce>
+        <Step>
+            <Name>SendToLoggly</Name>
+        </Step>
+    </DefaultFaultRule>
+	
+	<Flows>
+		<Flow name="OAuth Client Credentials Flow">
+			<Condition>
+				(proxy.pathsuffix MatchesPath "/token") and 
+				(request.verb = "POST")
+			</Condition>
+			<Request>
+				<Step>
+					<Name>GenerateAccessToken</Name>
+				</Step>
+			</Request>
+		</Flow>
+	</Flows>
+	
+	<HTTPProxyConnection>
+		<BasePath>/unit-testing-demo</BasePath>
+		<VirtualHost>default</VirtualHost>
+	</HTTPProxyConnection>
+	
+	<RouteRule name="empty" />
+	
+</ProxyEndpoint>

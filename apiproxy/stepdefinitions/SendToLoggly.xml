@@ -1,0 +1,3 @@
+<Javascript name="SendToLoggly">
+    <ResourceURL>jsc://SendToLoggly.js</ResourceURL>
+</Javascript>

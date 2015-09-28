@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="unit-testing-demo">
+    <ConfigurationVersion minorVersion="0" majorVersion="4"/>
+    <Description></Description>
+    <DisplayName>unit-testing-demo</DisplayName>
+</APIProxy>
