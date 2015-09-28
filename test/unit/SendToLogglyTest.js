@@ -32,7 +32,7 @@ afterEach(function() {
 describe('feature: logging to loggly', function() {
 	it('should push error logs correctly to loggly', function() {
 		contextGetVariableMethod.withArgs('organization.name').returns('org1');
-		contextGetVariableMethod.withArgs('environment.name').returns('dev');
+		contextGetVariableMethod.withArgs('environment.name').returns('dev1');
 		contextGetVariableMethod.withArgs('messageid').returns('1234');
 		contextGetVariableMethod.withArgs('response.status.code').returns('400');
 		contextGetVariableMethod.withArgs('proxy.client.ip').returns('10.10.10.10');
@@ -59,7 +59,7 @@ describe('feature: logging to loggly', function() {
 		var logObject = JSON.parse(requestConstrArguments[3]);
 		expect(logObject.messageId).to.equal('1234');
 		expect(logObject.organization).to.equal('org1');
-		expect(logObject.environment).to.equal('dev');
+		expect(logObject.environment).to.equal('dev1');
 	});
 });
 
