@@ -1,0 +1,12 @@
+{
+  "name": "unit-testing-demo",
+  "version": "1.0.0",
+  "description": "Unit testing demo code for I Love APIs 2015",
+  "author": "Ozan Seymen",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3",
+    "sinon": "^1.17.1"
+  }
+}
