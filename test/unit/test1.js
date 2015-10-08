@@ -4,40 +4,10 @@ var hooks = require('./hooks.js');
 
 var js = '../../apiproxy/resources/jsc/SendToLoggly.js';
 
-// GLOBAL.context = {
-// 	getVariable: function(s) {}
-// };
-
-// GLOBAL.httpClient = {
-// 	send: function(s) {}
-// };
-
-// GLOBAL.Request = function(s) {};
-
-// var contextGetVariableMethod,
-// 	httpClientSendMethod,
-// 	requestConstr;
-
-// beforeEach(function() {
-// 	try{
-// 		console.log('beforeEach1');
-// 		contextGetVariableMethod = sinon.stub(context, 'getVariable');
-// 		httpClientSendMethod = sinon.stub(httpClient, 'send');
-// 		requestConstr = sinon.spy(GLOBAL, 'Request');
-// 	} catch(e){}
-// });
-
-// afterEach(function() {
-// 	console.log('afterEach1');
-// 	contextGetVariableMethod.restore();
-// 	httpClientSendMethod.restore();
-// 	requestConstr.restore();
-// });
-
-describe('feature: logging to loggly1', function() {
+describe('feature: logging to loggly2', function() {
 	it('should push error logs correctly to loggly', function(done) {
 		var o = hooks.get();
-
+		
 		o.contextGetVariableMethod.withArgs('organization.name').returns('org1');
 		o.contextGetVariableMethod.withArgs('messageid').returns('1234');
 
@@ -69,6 +39,4 @@ function execute(module){
     delete require.cache[require.resolve(module)];
     return require(module);
 }
-
-
 

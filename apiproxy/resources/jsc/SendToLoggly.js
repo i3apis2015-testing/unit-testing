@@ -8,12 +8,6 @@ try {
 		error: context.getVariable('oauthv2.GenerateAccessToken.fault_cause')
 	};
 
-	// if (log.environment === 'dev') {
-	// 	log.response = context.getVariable('response.content');
-	// } else {
-	// 	log.response = 'N/A';
-	// }
-
 	var url = 'http://logs-01.loggly.com/inputs/f32d42c7-8be7-40e1-bd27-d3d86a6caae8/tag/http/';
 
 	var header = {
